@@ -1,5 +1,5 @@
 {
-  "name": "calendar-logger",
+  "name": "logger-send-by-email",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,5 +20,8 @@
   "dependencies": {
     "node-cron": "^3.0.3",
     "nodemailer": "^6.9.13"
-  }
+  },
+  "files": [
+    "src/*.js"
+  ]
 }

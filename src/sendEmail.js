@@ -1,18 +1,17 @@
 import nodemailer from 'nodemailer';
 
-const transporter = nodemailer.createTransport({
-    host:'smtp.qq.com',
-    port: 465,
-    auth:{
-      user: '425664376@qq.com',
-      pass: '授权码'
-    }
-})
-
-export const sendEmail = async (to, subject, text, attachments= []) =>{
+export const sendEmail = async (from, formPass, to, subject, text, attachments= []) =>{
   try{
+    const transporter = nodemailer.createTransport({
+      host:'smtp.qq.com',
+      port: 465,
+      auth:{
+        user: from,
+        pass: formPass
+      }
+    })
     await transporter.sendMail({
-      from: '425664376@qq.com',
+      from,
       to,
       subject,
       text,
