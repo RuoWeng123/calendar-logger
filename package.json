@@ -13,7 +13,8 @@
     "url": "null"
   },
   "keywords": [
-    "null"
+    "sendEmail",
+    "logger"
   ],
   "author": "yang",
   "license": "ISC",
