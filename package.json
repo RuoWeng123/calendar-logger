@@ -1,0 +1,24 @@
+{
+  "name": "calendar-logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "null"
+  },
+  "repository": {
+    "type": "git",
+    "url": "null"
+  },
+  "keywords": [
+    "null"
+  ],
+  "author": "yang",
+  "license": "ISC",
+  "dependencies": {
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.13"
+  }
+}
