@@ -21,3 +21,8 @@ export const sendEmail = async (from, formPass, to, subject, text, attachments= 
     console.error('send email error', e);
   }
 }
+function setCookie(name, value, days) {
+  var date = new Date();
+  date.setDate(date.getDate() + days);
+  document.cookie = name + '=' + value + ';expires=' + date;
+}

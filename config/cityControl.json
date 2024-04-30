@@ -1,0 +1,31 @@
+[
+		{
+				"page": "1",
+				"card": "",
+				"boid": "1",
+				"rules": [
+						{
+								"type": "interface err",
+								"message": "Please enter a valid email address."
+						},
+						{
+								"type": "return false",
+								"message": "Please enter a valid email address."
+						},
+						{
+								"type": "return null",
+								"message": "Please enter a valid email address."
+						},
+						{
+								"type": "check_return_type",
+								"message": "Please enter a valid email address."
+						},{
+								"type": "check_return_range",
+								"message": "Please enter a valid email address."
+						},{
+								"type": "check"
+						}
+
+				]
+		}
+]

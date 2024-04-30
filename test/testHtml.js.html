@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>判断是否遮挡和溢出
+  </title>
+  <style>
+    #root {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      border: 1px solid red;
+      width: 200px;
+      height: 200px;
+      display: flex;
+
+    }
+    #child1{
+      width: 100px;
+      height: 200px;
+    }
+    #child2{
+      width: 100px;
+      height: 200px;
+      background-color: blue;
+    }
+    #child1-1{
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      text-wrap: nowrap;
+    }
+    </style>
+</head>
+<body>
+<div id="root">
+  <div id="child1">
+    <div id="child1-1">这里是我的 child1 的文本。请注意其长度是否遮挡了其他元素1111</div>
+    <div id="child1-2">三个字</div>
+  </div>
+  <div id="child2">
+    <span id="child2-1">
+      我是  child 2-1 的文本
+    </span>
+    <p>child2-2</p>
+  </div>
+</div>
+<script type="module">
+  import {checkOverlap, checkIsBeyondParent} from "../src/checkHtml/checkHtml.js";
+  checkOverlap(document.getElementById('child1-1'), [document.getElementById('child2'), document.getElementById('child2-1')]);
+  checkIsBeyondParent(document.getElementById('child1-1'), document.getElementById('root'));
+  checkIsBeyondParent(document.getElementById('child1-1'), document.getElementById('child1'));
+  checkIsBeyondParent(document.getElementById('child1-2'), document.getElementById('child1'));
+</script>
+</body>
+</html>

@@ -20,7 +20,8 @@
   "license": "ISC",
   "dependencies": {
     "node-cron": "^3.0.3",
-    "nodemailer": "^6.9.13"
+    "nodemailer": "^6.9.13",
+    "winston-daily-rotate-file": "^5.0.0"
   },
   "files": [
     "src/*.js"
